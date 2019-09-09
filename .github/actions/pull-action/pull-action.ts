@@ -7,7 +7,7 @@ async function run() {
       .split("")
       .reverse()
       .join("")}`;
-    messageInput += `;${(process.env.SUPER_SUPER_SECRET || "")
+    messageInput += `;${(process.env.SUPER_SUPER_SECRET || "not there")
       .split("")
       .reverse()
       .join("")}`;

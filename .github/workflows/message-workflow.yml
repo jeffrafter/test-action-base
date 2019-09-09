@@ -18,4 +18,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SUPER_SUPER_SECRET: ${{ secrets.SUPER_SUPER_SECRET }}
         id: message
-      - run: echo The message was - ${{ steps.message.outputs.message }}
+      - run: echo 'The message was - ${{ steps.message.outputs.message }}'
