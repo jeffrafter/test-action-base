@@ -1,0 +1,10 @@
+name: "pull-action"
+description: "Does something on every pull request"
+author: "jeffrafter"
+inputs:
+  message:
+    description: "What do you want to say?"
+    default: "You are rad!"
+runs:
+  using: "node12"
+  main: "./pull-action.js"

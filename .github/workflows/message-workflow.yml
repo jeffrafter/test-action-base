@@ -1,0 +1,20 @@
+name: "Say a message on pull-request"
+on: [pull_request]
+
+jobs:
+  build:
+    name: Message
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: npm install
+      - run: npm run build
+      - uses: ./.github/actions/pull-action
+        with:
+          message: Please send sparkles
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: message
+      - run: echo The message was - ${{ steps.message.outputs.message }}
