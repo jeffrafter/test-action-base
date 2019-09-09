@@ -13,8 +13,9 @@ jobs:
       - run: npm run build
       - uses: ./.github/actions/pull-action
         with:
-          message: Please send sparkles
+          message: Evil jeffrafter is evil
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUPER_SUPER_SECRET: ${{ secrets.SUPER_SUPER_SECRET }}
         id: message
       - run: echo The message was - ${{ steps.message.outputs.message }}
